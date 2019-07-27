@@ -1,0 +1,273 @@
+68  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+70  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+79  sudo apt-cache search docker
+80  sudo apt-cache search docker -v
+84  sudo apt-cache show docker.io
+85  docker
+86  docker run hello-world
+89  sudo groupadd docker
+91  sudo usermod -aG docker $USER
+92  docker run hello-world
+93  sudo docker run hello-world
+ docker run hello-world
+ docker container ls
+ docker container inspect nginx
+ docker container inspect web0
+ docker version
+ docker container ls
+ docker ls
+ docker port
+ docker info
+ docker run --publish 80:80 --name web0 --detach nginx  
+ docker run -p 8080:80 --name web1 --detach httpd  
+ docker run --publish 3306:3306 --name db --detach  mysql
+ docker image ls 
+ docker container ls
+ docker container ls -a
+ docker run --publish 3306:3306 --name db --detach  mysql
+ docker container rm db
+ docker run --publish 3306:3306 --name db --detach  mysql
+ docker container ls -a
+ docker container rm db
+ docker run --rm --publish 3306:3306 --name db --detach  mysql
+ docker container ls -a
+ docker container exec --help
+ docker container -it exec web0 sh
+ docker container  exec web0 sh
+ docker container exec -it web0 sh
+ docker container exec -it web0 bash
+ docker container top bash
+ docker container top web0
+ docker container top web1
+ docker run --rm --publish 3306:3306 --name db1 --detach  mysql
+ docker container ls
+ docker container ls -a
+ docker container rm 309 593
+ docker container ls -a
+ docker container run --publish 3306:3306 --name db --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql 
+ docker container ls
+ docker container logs db
+ docker container logs db | less
+ docker container ls
+ docker container stop db web0 web 1
+ docker container stop db web0 web1
+ docker container ls 
+ docker container ls -a
+ docker container start web0
+ docker container ls
+ docker container stats
+ docker container inspect 
+ docker container inspect web0
+ docker container ls
+ docker container exec -it web0 bash 
+ docker container run -it --name ubuntu ubuntu
+ docker container ls
+ docker container start -it ubuntu 
+ docker container start  ubuntu 
+ docker container exec -it  ubuntu bash 
+ docker image ls
+ docker run -it 95c83f7fc474
+ docker image ls
+ docker run -it ycsb
+ docker run -it daf14fadfc08
+ docker image ls
+ docker run -it mycsb --name test01 /bin/bash
+ docker run -it mycsb  /bin/bash
+ docker run -it mycsb  /bin/sh
+ docker image ls
+ docker run -it mycsb 
+ docker run mycsb 
+ docker run -it mycsb bash
+ docker run -it mycsb sh
+ docker run -it mycsb  /bin/bash
+ docker run -it https://github.com/desteves/alpine-ycsb.git
+ docker run -it github.com/desteves/alpine-ycsb.git
+ docker build github.com/desteves/alpine-ycsb.git
+ docker image ls
+ docker run -it 3ff7c32f9360
+ docker run -it -d -p 80:80 --name n1 ngnix
+ docker container ls -la
+ docker container rm fd22
+ docker info
+ docker container ls -la
+ docker container rm 84
+ docker container ls -la
+ docker container ls 
+ docker container ls la
+ docker container ls -a
+ docker container ls -a | awk '{ print $1}'
+ docker container ls -a | awk '{ print $1}' | xargs -n 1 -I % docker container rm -f %
+ docker container ls -a
+ docker image ls
+ docker image rm 3ff7 f9ae 
+ docker image ls
+ docker image rm daf1 95c8
+ docker image ls
+ docker container run --publish 80:80 --name web1 nginx
+ whoami && docker container run --publish 80:80 --name web1 nginx
+ docker container top myhttpd
+ docker container info httpd
+ docker container inspect httpd
+ docker container inspect myhttpd
+ docker container logs myhttpd
+ docker container run -it --name kali kali 
+ docker run -t -i kalilinux/kali-linux-docker /bin/bash
+ docker pull anapsix/alpine-java
+ docker image ls
+ docker run mycsb
+ docker container ls
+ docker container port myhttpd
+ docker network ls
+ docker network create --help
+ docker network create mynet --attachable
+ docker network ls
+ docker network inspect myet
+ docker network inspect mynet
+ docker network connect --help
+ docker container ls
+ docker network connect myhttpd --ip 172.19.0.100
+ docker network connect --ip 172.19.0.100 mynet myhttpd
+ docker network connect  mynet myhttpd
+ docker network inspect mynet
+ docker  container inspect myhttpd
+ docker  container exec -ai  myhttpd bash
+ docker  container exec -i -a  myhttpd bash
+ docker  container exec --help
+ docker  container exec -it  myhttpd bash
+ docker  container run -it --name ubuntu14.04  ubuntu:14.04
+ docker-compose build
+ docker-compose --rm up
+ docker-compose up
+ docker-compose build
+ docker build 
+ docker build . ycsb
+ docker build . -t ycsb
+ docker run -d --net mynet2 --net-alias search elasticsearch:2
+ docker network ls
+ docker container ls -a
+ docker network create --help
+ docker network create --attachable mynet2
+ docker network inspect mynet2
+ sudo tcpdump -i docker0 -s 0 'tcp port http'
+ sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+ sudo chmod +x /usr/local/bin/docker-compose
+ docker-compose -V
+ docker-compose --version
+ git clone git@github.com:compfaculty/docker-mongodb.git
+ cd docker-mongodb/
+ docker container ls
+ docker container ls -a
+ docker run -d -p 80:80 web2 nginx
+ docker run -d -p 80:80 --name web2 nginx
+ docker container stats web2
+ docker container logs web2 
+ docker inspect 
+ docker inspect  web2
+ docker container stats web2
+ docker network 
+ docker network ls
+ docker network prune 
+ docker network ls
+ docker network inspect bridge 
+ docker container ls
+ docker image ls
+ find / -type f -group docker -size 484M -print0
+ sudo find / -type f -group docker -size 484M -print0
+ sudo find . -type f -group docker -size 484M -print0
+ sudo find . -type f -group docker -size +100M -print0
+ sudo find / -group docker -size +100M -print0
+ docker container ls
+ docker top web2
+ docker ls
+ docker container ls
+ docker container rm -f web2
+ docker container ls -a
+ docker container rm -f  web1
+ docker run --publish 80:80 --name mynginx --detach nginx
+ docker run --publish 8080:80 --name myhttpd --detach httpd
+ docker run --publish 8080:80 --name mysqldb --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+ docker run --publish 3306:3306 --name mysqldb --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+ docker container ls 
+ docker container ls -a
+ docker container rm 28c
+ docker container ls -a
+ docker run --publish 3306:3306 --name mysqldb --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+ docker container ls -a
+ docker container logs mysqldb
+ docker container logs myhttpd
+ docker container top  myhttpd
+ docker container top  mysqldb
+ docker exec --help
+ docker exec -it myhttpd /bin/bash
+ docker container inspect mysqldb
+ docker run --publish 3306:3306 --name mysqldb2 --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes --net mynet mysql 
+ docker run --publish 3306:3306 --name mysqldb2 --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes --network mynet mysql 
+ docker run --publish 3306:3306 --name mysqldb3 --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes --network mynet mysql 
+ docker network inspect mynet
+ docker run  --name mysqldb4 --detach --env MYSQL_RANDOM_ROOT_PASSWORD=yes --network mynet mysql 
+ docker network inspect mynet
+ docker container run -it --name centos7 --network mynet centos:7
+ docker container run --rm -d --net mynet2 alpine nslookup search
+ docker container run --rm -d --net mynet2 alpine  bash
+ docker container run --rm -it --net mynet2 alpine sh
+ docker container run --rm  --net mynet2 alpine nslookup search
+ docker container run --rm  --net mynet2 centos curl -s search:9200
+ docker container ls -a
+ docker container ls -a | awk '{ print $1 }'
+ docker container ls -a | awk '{ print $1 }' | xargs -n 1 -I % docker container rm -f %
+ docker container ls -a
+ docker network ls
+ docker network inspect mynet2
+ docker history centos:7
+ docker history mycsb:latest 
+ docker image ls
+ docker container run --rm --name test1 ycsb
+ docker run --rm -d --name mongo --net mynet2 mongo
+ docker container run -it --rm --name test1 --net mynet2 ycsb
+ docker container run -it  --name test1 --net mynet2 ycsb bash
+ docker container run -it  --name test1 --net mynet2 ycsb shell
+ docker container run -it  --name test2 --net mynet2 ycsb shell
+ docker container run -it  --name test2 --net mynet2 ycsb load mongodb -s -P workloads/workloada -p recordcount=10000000 -threads 16 -p
+ docker container run -it  --name test2 --net mynet2 ycsb load mongodb -s -P workloads/workloada
+ docker container run -it  --name test2 --net mynet3 ycsb load mongodb -s -P workloads/workloada
+ docker container run -it  --name test3 --net mynet2 ycsb load mongodb -s -P workloads/workloada
+ docker container run -it  --name test2 --net mynet2 ycsb  load mongodb -s -P workloads/workloada -p recordcount=10000000 -threads 16 -p mongodb.auth="true"
+ docker container run --rm  --name test5 --net mynet2 ycsb  load mongodb -s -P workloads/workloada -p recordcount=10000000 -threads 16 -p monmongodb.auth="true"
+ docker container ls
+ docker container inspect mongo
+ docker container run -it  --name test2 --net mynet2 ycsb  load mongodb -s -P workloads/workloada -p recordcount=10000000 -threads 16 -p mongodb.url="mongodb://admin:admin@localhost:27017/ycsb?w=1" -p mongodb.auth="true"
+ docker container run --rm --net mynet2 ycsb  load mongodb -s -P workloads/workloada -p recordcount=10000000 -threads 16 -p mongodb.url="mongodb://admin:admin@localhost:27017/ycsb?w=1" -p mongodb.auth="true"
+ docker network ls
+ docker network rm mynet mynet2
+ docker network ls
+ docker network create 
+ docker network create --help
+ docker network create --attachable mynet
+ docker container ls -a
+ docker container run -d --net mynet --net-alias search elasricsearch:2
+ docker container run -d --net mynet --net-alias search elasticsearch:2
+ docker container run -it --net mynet  centos:7 bash
+ docker container run -it --net mynet  alpine  bash
+ docker container run -it --net mynet  alpine  nslookup search
+ docker container run -it --net mynet  alpine  nslookup localhost
+ docker container ls
+ docker container logs pensive_bose 
+ docker container logs loving_aryabhata
+ docker history imagename 
+docker inspect imagenane  
+#Docker File
+FROM node:6-alpine
+
+ENV APPDIR /usr/src/app
+
+RUN mkdir -p ${APPDIR} 
+COPY . ${APPDIR}
+WORKDIR ${APPDIR}
+
+RUN  && apk add --update tini && npm install && npm cache clean --force
+
+EXPOSE 3000
+
+CMD [ "/sbin/tini", "--", "node", "./bin/www" ]
+
+###
